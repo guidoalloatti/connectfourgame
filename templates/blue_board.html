@@ -1,0 +1,16 @@
+<template name="blue_board">
+	<table class="board">
+		<tr>
+			{{#each columns}}
+  				<th class="board_cell" id="col_{{column}}"><input type="button" class="add_chip add_chip_blue" column="{{column}}" value="Drop" /></th>
+			{{/each}}
+		</tr>
+		{{#each rows}}
+			<tr>
+				{{#each columns}}
+					<td class="board_cell" id="{{../row}}{{column}}"></td>
+				{{/each}}
+			</tr>
+		{{/each}}
+	</table>
+</template>
